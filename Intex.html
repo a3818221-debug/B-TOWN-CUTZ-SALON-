@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>B-TOWN CUTZ SALON — Book Appointment</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- If you want to use your own logo later, replace src -->
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=5d8fb8b848f34f2f3a3f6f3b4f3d6b8a" alt="B-Town Cutz Logo" class="logo">
+        <div>
+          <h1>B-TOWN CUTZ SALON</h1>
+          <p class="muted">Panjab, Mohali — Unisex • Premium Grooming</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <!-- Header WhatsApp button (replace number if needed) -->
+        <a class="btn btn-ghost" href="https://wa.me/917017371981" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn btn-primary" href="#book">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner container">
+      <div class="hero-text">
+        <h2>Luxury cuts. Bold styles. <span class="accent">B-TOWN CUTZ.</span></h2>
+        <p>Expert stylists • Premium products • Clean & comfortable environment</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#services">Our Services</a>
+          <a class="btn btn-ghost" href="#book">Book Now</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <!-- HD hero image (free stock) -->
+        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=b6f0a8d6b1c9c7d9b2a8e2b5f4d1e5a8" alt="Salon banner" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section container">
+    <h3 class="section-title">Our Services</h3>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1541477033-1e3d877a7f3d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c9dbd6f2c2b1e7f5f6b7c3d1a8b9e7f" alt="Haircut">
+        <h4>Professional Haircuts</h4>
+        <p>Trendy cuts for men & women — starting at <strong>₹300</strong>.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2a9b5c5c0e1ea2644f4f7a8b3b3c5d9f" alt="Beard">
+        <h4>Beard Styling</h4>
+        <p>Precision trims & shaping — starting at <strong>₹150</strong>.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8a1e4b2f6c4e6d3f7a2d3c8b1f6a5b7f" alt="Color">
+        <h4>Hair Colouring</h4>
+        <p>Premium colouring & highlights — starting at <strong>₹800</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section gallery container">
+    <h3 class="section-title">Gallery</h3>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b3f7f1c2f5d8b7a9c3d4e6f7a8b9c0d" alt="">
+      <img src="https://images.unsplash.com/photo-1505927105571-8bd8730b1b5a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=cf9d1e3d4b5f6a7b8c9d0e1f2a3b4c5d" alt="">
+      <img src="https://images.unsplash.com/photo-1555633510-1f0f5d9b0f0f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=12a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5" alt="">
+    </div>
+  </section>
+
+  <!-- Booking form -->
+  <section id="book" class="section book container">
+    <h3 class="section-title">Book an Appointment</h3>
+    <p class="muted">Fill details and we will confirm. Or click WhatsApp to chat instantly.</p>
+
+    <form id="bookingForm" class="form-card" autocomplete="off">
+      <div class="row">
+        <input id="name" name="name" placeholder="Your name" required>
+        <input id="phone" name="phone" placeholder="Phone (with country code)" required>
+      </div>
+
+      <div class="row">
+        <select id="service" name="service" required>
+          <option value="">Select Service</option>
+          <option>Professional Haircuts — ₹300</option>
+          <option>Beard Styling — ₹150</option>
+          <option>Hair Colouring — ₹800</option>
+        </select>
+
+        <input id="date" name="date" type="date" required>
+      </div>
+
+      <div class="row">
+        <input id="time" name="time" type="time" required>
+        <input id="address" name="address" placeholder="Pickup / Address (optional)">
+      </div>
+
+      <textarea id="notes" name="notes" rows="3" placeholder="Any notes (allergies, preferences)"></textarea>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Send Booking</button>
+        <!-- fallback WhatsApp order -->
+        <button id="waQuick" type="button" class="btn btn-ghost">Send via WhatsApp</button>
+      </div>
+
+      <p id="formMsg" class="muted" style="display:none;"></p>
+    </form>
+  </section>
+
+  <!-- Contact / footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>B-TOWN CUTZ SALON</h4>
+          <p>Panjab, Mohali</p>
+          <p>Open: Mon–Sat • 10:00 — 20:00</p>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <p><a href="https://wa.me/917017371981">💬 WhatsApp: +91 70173 71981</a></p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="#services">Services</a> • <a href="#book">Book</a></p>
+        </div>
+      </div>
+
+      <p class="copyright">© <strong>B-TOWN CUTZ SALON</strong> — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Small JS: form submit -> POST /api/book and WA fallback -->
+  <script>
+    const ADMIN_WA = '917017371981'; // number without +, used for wa link
+    const BACKEND_ENDPOINT = '/api/book'; // backend API (will be created next). If not present WA fallback used.
+
+    // build WA message for quick send
+    function buildWA(text) {
+      return 'https://wa.me/' + ADMIN_WA + '?text=' + encodeURIComponent(text);
+    }
+
+    // form submit
+    document.getElementById('bookingForm').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const msgEl = document.getElementById('formMsg');
+      msgEl.style.display = 'none';
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        service: document.getElementById('service').value,
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        address: document.getElementById('address').value.trim(),
+        notes: document.getElementById('notes').value.trim()
+      };
+
+      // quick client-side validation
+      if(!data.name || !data.phone || !data.service || !data.date || !data.time){
+        msgEl.textContent = 'Please fill required fields.';
+        msgEl.style.display = 'block';
+        return;
+      }
+
+      // try POST to backend
+      try {
+        const res = await fetch(BACKEND_ENDPOINT, {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(data)
+        });
+
+        if(res.ok){
+          msgEl.textContent = 'Booking sent! We will confirm soon.';
+          msgEl.style.display = 'block';
+          this.reset();
+        } else {
+          // fallback to WA if backend not ready
+          throw new Error('Server error');
+        }
+      } catch(err) {
+        // fallback: open WhatsApp with prefilled message
+        const text = `New Booking: ${data.service}\nName: ${data.name}\nPhone: ${data.phone}\nDate: ${data.date} ${data.time}\nAddress: ${data.address}\nNotes: ${data.notes}`;
+        window.open(buildWA(text), '_blank');
+      }
+    });
+
+    // quick WA button
+    document.getElementById('waQuick').addEventListener('click', function(){
+      const service = document.getElementById('service').value || 'Service';
+      const name = document.getElementById('name').value || 'Name';
+      const phone = document.getElementById('phone').value || 'Phone';
+      const date = document.getElementById('date').value || '';
+      const time = document.getElementById('time').value || '';
+      const text = `Booking Request: ${service}\nName: ${name}\nPhone: ${phone}\nDate: ${date} ${time}`;
+      window.open(buildWA(text), '_blank');
+    });
+  </script>
+</body>
+</html>
