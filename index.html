@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shivam Goswami — Premium 3D Graphic Designer</title>
+  <meta name="description" content="3D Luxury portfolio of graphic designer Shivam Goswami. Premium branding, 3D logos, social creatives, posters & packaging." />
+  <meta name="theme-color" content="#1a0a1a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shivam Goswami — 3D Graphic Designer" />
+  <meta property="og:description" content="Premium 3D Branding • Luxury Logos • Social Creatives" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1600&auto=format&fit=crop" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f0510;
+      --panel:#1a0a1a;
+      --muted:#d0b8d0;
+      --text:#f9e9f9;
+      --primary:#ff6bce;
+      --primary-2:#ff3dbd;
+      --secondary:#d68fff;
+      --glass:rgba(255,255,255,.08);
+      --border:rgba(255,255,255,.15);
+      --shadow:0 30px 60px rgba(0,0,0,.65), inset 0 1px 0 rgba(255,255,255,.05);
+      --radius:22px;
+      --radius-lg:28px;
+      --radius-sm:14px;
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box; margin:0; padding:0}
+    html,body{height:100%}
+    body{
+      margin:0; background:
+      radial-gradient(60rem 60rem at 10% -10%, #2a0d2a 0%, transparent 55%),
+      radial-gradient(60rem 60rem at 110% 10%, #3d0a3d 0%, transparent 55%),
+      var(--bg);
+      color:var(--text);
+      font-family:Manrope, system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      scroll-behavior:smooth;
+    }
+    img{max-width:100%; display:block; height:auto}
+    a{color:inherit; text-decoration:none}
+    button{background:none; border:none; font-family:inherit; cursor:pointer}
+
+    /* 3D Floating Animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(2deg); }
+    }
+
+    /* NAV */
+    .nav{
+      position:sticky; top:0; z-index:50; backdrop-filter:blur(14px);
+      background:linear-gradient(to bottom, rgba(15,5,16,.9), rgba(15,5,16,.7));
+      border-bottom:1px solid var(--border);
+    }
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .row{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px; padding:12px 0}
+    .logo{
+      width:44px; height:44px; border-radius:14px; display:grid; place-items:center;
+      background:conic-gradient(from 140deg, #ffc6eb, #ff6bce, #ff3dbd, #d68fff, #f8c6ff);
+      color:#1a0a1a; font-weight:900; letter-spacing:.4px; 
+      box-shadow:0 10px 24px rgba(255,59,189,.35);
+      animation: float 6s ease-in-out infinite;
+    }
+    .brand h1{font-size:18px; margin:0; letter-spacing:.3px}
+    .navlinks{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+    .navlinks a{opacity:.9; font-weight:700; padding:10px 14px; border-radius:12px; transition:all 0.2s ease}
+    .navlinks a:hover{background:var(--glass); opacity:1}
+    .cta{
+      background:linear-gradient(92deg, var(--primary), var(--primary-2)); 
+      color:#1a0a1a; font-weight:800; padding:12px 18px; 
+      border-radius:999px; box-shadow:0 12px 30px rgba(255,59,189,.4); 
+      transition:transform 0.2s ease, box-shadow 0.2s ease
+    }
+    .cta:hover{
+      transform:translateY(-2px); 
+      box-shadow:0 16px 40px rgba(255,59,189,.5);
+    }
+
+    /* HERO - UPGRADED 3D VERSION */
+    .hero{
+      position:relative; isolation:isolate;
+      background:
+        radial-gradient(ellipse at 20% 20%, rgba(255, 107, 206, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(214, 143, 255, 0.2) 0%, transparent 50%);
+    }
+    .hero-wrap{
+      display:grid; grid-template-columns:1.1fr .9fr; gap:40px; 
+      padding:90px 0 70px;
+      position:relative;
+    }
+    @media (max-width:980px){.hero-wrap{grid-template-columns:1fr; padding:70px 0 50px}}
+    
+    /* 3D Floating Elements */
+    .hero-3d-element {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 30px;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      filter: blur(60px);
+      opacity: 0.3;
+      z-index: -1;
+      animation: float 8s ease-in-out infinite;
+    }
+    .hero-3d-element:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      width: 400px;
+      height: 400px;
+    }
+    .hero-3d-element:nth-child(2) {
+      bottom: 10%;
+      right: 10%;
+      width: 500px;
+      height: 500px;
+      animation-delay: 2s;
+    }
+    
+    .badge{
+      display:inline-flex; align-items:center; gap:10px; padding:7px 12px; 
+      border-radius:999px; background:var(--glass); border:1px solid var(--border); 
+      color:var(--muted); font-weight:700; font-size:14px;
+      backdrop-filter: blur(10px);
+    }
+    .title{
+      font-size:56px; line-height:1.05; margin:16px 0 10px; letter-spacing:.2px;
+      position:relative;
+    }
+    @media (max-width:680px){.title{font-size:40px}}
+    .title .grad{
+      background:linear-gradient(92deg, #fff, #ff9bdd 45%, #ff6bce); 
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow: 0 0 20px rgba(255, 107, 206, 0.3);
+    }
+    .lead{color:var(--muted); font-size:18px; max-width:620px}
+    .hero-cta{display:flex; gap:12px; align-items:center; margin-top:22px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px; padding:13px 18px; 
+      border-radius:999px; border:1px solid var(--border); background:var(--panel); 
+      box-shadow:var(--shadow); font-weight:800; transition:all 0.2s ease
+    }
+    .btn svg{width:18px; height:18px}
+    .btn.primary{
+      background:linear-gradient(92deg, var(--primary), var(--primary-2)); 
+      color:#1a0a1a; border:0
+    }
+    .btn.primary:hover{
+      transform:translateY(-2px); 
+      box-shadow:0 16px 40px rgba(255,59,189,.5)
+    }
+    .btn.ghost{background:transparent}
+    .btn:hover{
+      transform:translateY(-2px); 
+      box-shadow:0 16px 40px rgba(0,0,0,.6)
+    }
+    .stats{display:flex; gap:16px; margin-top:26px; flex-wrap:wrap}
+    .stat{
+      padding:14px 16px; border-radius:16px; background:var(--glass); 
+      border:1px solid var(--border); min-width:140px; transition:transform 0.2s ease
+    }
+    .stat:hover{transform:translateY(-4px)}
+    .stat b{font-size:22px; display:block; margin-bottom:4px}
+
+    .portrait{
+      position:relative;
+      perspective: 1000px;
+    }
+    .portrait-card{
+      padding:16px; border-radius:var(--radius-lg); 
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)); 
+      border:1px solid var(--border); box-shadow:var(--shadow); 
+      transition:transform 0.5s ease;
+      transform-style: preserve-3d;
+    }
+    .portrait:hover .portrait-card{
+      transform: rotateY(10deg) rotateX(5deg) scale(1.02);
+    }
+    .portrait img{
+      border-radius:18px; aspect-ratio:4/5; object-fit:cover; 
+      transition:transform 0.5s ease;
+    }
+    .rings{
+      position:absolute; inset:-50px -30px -40px -30px; pointer-events:none; z-index:-1; 
+      filter:blur(14px); opacity:.9; background:
+        radial-gradient(700px 260px at 40% 10%, rgba(255, 107, 206, .3), transparent 60%),
+        radial-gradient(600px 260px at 80% 70%, rgba(214, 143, 255, .25), transparent 60%),
+        radial-gradient(900px 300px at 20% 70%, rgba(255, 59, 189, .3), transparent 65%);
+      border-radius:28px;
+    }
+
+    /* SECTIONS */
+    section{padding:80px 0}
+    .section-title{font-size:34px; margin:0 0 10px}
+    .section-lead{color:var(--muted); margin:0 0 18px; max-width:800px}
+
+    /* SERVICES */
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px}
+    .card{grid-column:span 4; background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)); border:1px solid var(--border); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); transition:transform 0.3s ease}
+    .card:hover{transform:translateY(-8px)}
+    @media (max-width:980px){.card{grid-column:span 6}}
+    @media (max-width:640px){.card{grid-column:span 12}}
+    .card h3{margin:8px 0; font-size:20px}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid var(--border); border-radius:999px; color:var(--muted); background:var(--glass); font-size:12px; font-weight:800}
+
+    /* PORTFOLIO */
+    .filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px}
+    .filter{padding:10px 14px; border-radius:999px; border:1px solid var(--border); background:var(--glass); font-weight:800; color:var(--muted); cursor:pointer; transition:all 0.2s ease}
+    .filter.active{background:linear-gradient(92deg, var(--primary), var(--primary-2)); color:#1a0a1a; border:0}
+    .filter:hover:not(.active){background:rgba(255,255,255,.1)}
+    .work{position:relative; overflow:hidden; border-radius:20px; border:1px solid var(--border); background:#1a0a1a}
+    .work img{width:100%; height:100%; object-fit:cover; aspect-ratio: 4/3; transform:scale(1.02); transition:all .55s ease}
+    .work:hover img{transform:scale(1.08) rotate(.2deg)}
+    .work .meta{position:absolute; inset:auto 0 0 0; padding:14px; display:flex; align-items:center; justify-content:space-between; background:linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,0)); transition:all 0.3s ease}
+    .work:hover .meta{background:linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,0))}
+    .work .meta b{font-size:16px}
+
+    /* ABOUT / TESTIMONIAL */
+    .split{display:grid; grid-template-columns:1.1fr .9fr; gap:20px}
+    @media (max-width:900px){.split{grid-template-columns:1fr}}
+    .quote{padding:22px; border-radius:22px; background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)); border:1px solid var(--border); box-shadow:var(--shadow); transition:transform 0.3s ease}
+    .quote:hover{transform:translateY(-8px)}
+    .quote p{color:var(--muted); margin:0 0 8px; font-size:17px}
+
+    /* CONTACT */
+    .contact{display:grid; grid-template-columns:1.1fr .9fr; gap:18px}
+    @media (max-width:900px){.contact{grid-template-columns:1fr}}
+    .form{background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)); border:1px solid var(--border); border-radius:22px; padding:18px; box-shadow:var(--shadow)}
+    .field{display:flex; flex-direction:column; gap:8px; margin-bottom:12px}
+    .field label{font-weight:600}
+    .field input, .field textarea{background:#1a0a1a; border:1px solid var(--border); color:var(--text); padding:14px 16px; border-radius:14px; outline:none; transition:border .2s ease; font-family:inherit; font-size:16px}
+    .field input:focus, .field textarea:focus{border-color:var(--primary)}
+    .field textarea{resize:vertical; min-height:120px}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border); padding:26px 0; color:var(--muted)}
+    .footgrid{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+    .socials{display:flex; gap:12px}
+    .soc{width:42px; height:42px; display:grid; place-items:center; border-radius:999px; background:var(--glass); border:1px solid var(--border); transition:all 0.2s ease}
+    .soc:hover{background:rgba(255,255,255,.1); transform:translateY(-2px)}
+
+    /* Appear Animations */
+    .reveal{opacity:0; transform:translateY(14px); transition:.7s ease}
+    .reveal.visible{opacity:1; transform:none}
+
+    /* Focus styles for accessibility */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    /* Floating shapes for 3D effect */
+    .floating-shapes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container">
+      <div class="row">
+        <a class="brand" href="#home" aria-label="Shivam Goswami Home">
+          <div class="logo">SG</div>
+          <h1>Shivam Goswami <span style="opacity:.6">• 3D Designer</span></h1>
+        </a>
+        <nav class="navlinks">
+          <a href="#services">Services</a>
+          <a href="#work">Portfolio</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="cta">Hire Me</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO with 3D Elements -->
+  <section id="home" class="hero">
+    <div class="hero-3d-element"></div>
+    <div class="hero-3d-element"></div>
+    
+    <div class="container hero-wrap">
+      <div>
+        <div class="badge reveal">
+          <span>✨</span> Premium 3D • Luxury Branding
+        </div>
+        
+        <h1 class="title reveal" style="margin-bottom: 1.5rem;">
+          <span class="grad">Shivam Goswami</span>
+        </h1>
+        
+        <h2 class="section-lead reveal" style="font-size: 2rem; margin-bottom: 2rem;">
+          Crafting <span class="grad">3D Luxury Designs</span> for Elite Brands
+        </h2>
+        
+        <p class="lead reveal" style="max-width: 600px; font-size: 1.1rem; line-height: 1.7;">
+          I specialize in premium 3D branding, luxury packaging, and high-end social media visuals that 
+          <span style="font-weight: 700; background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; background-clip: text; color: transparent;">elevate brands to new dimensions</span>.
+        </p>
+        
+        <div class="hero-cta reveal">
+          <a class="btn primary" href="#work" style="padding: 1rem 2rem;">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+            </svg>
+            Explore Portfolio
+          </a>
+          <a class="btn" href="#contact" style="padding: 1rem 2rem; background: var(--panel); border: 1px solid var(--border);">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Get in Touch
+          </a>
+        </div>
+        
+        <div class="stats reveal" style="margin-top: 3rem;">
+          <div class="stat" style="background: rgba(255,107,206,0.1); border: 1px solid rgba(255,107,206,0.2);">
+            <b>8+ Years</b>
+            <span class="muted">Design Excellence</span>
+          </div>
+          <div class="stat" style="background: rgba(214,143,255,0.1); border: 1px solid rgba(214,143,255,0.2);">
+            <b>150+</b>
+            <span class="muted">Brands Transformed</span>
+          </div>
+          <div class="stat" style="background: rgba(255,59,189,0.1); border: 1px solid rgba(255,59,189,0.2);">
+            <b>100%</b>
+            <span class="muted">Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portrait reveal" style="position: relative;">
+        <div class="portrait-card" style="transform-style: preserve-3d; transition: all 0.5s ease;">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1400&auto=format&fit=crop" 
+               alt="3D Designer at work" 
+               style="border-radius: 20px; box-shadow: 0 25px 50px rgba(0,0,0,0.3);">
+        </div>
+        <div class="rings" style="background: 
+              radial-gradient(600px 600px at 70% 30%, rgba(255,107,206,0.3), transparent 60%),
+              radial-gradient(600px 600px at 30% 70%, rgba(214,143,255,0.3), transparent 60%);">
+        </div>
+        <div class="floating-shapes">
+          <div class="shape" style="top: 20%; left: -10%; width: 100px; height: 100px; background: rgba(255,107,206,0.2); filter: blur(30px); animation: float 6s ease-in-out infinite;"></div>
+          <div class="shape" style="bottom: 10%; right: -10%; width: 150px; height: 150px; background: rgba(214,143,255,0.2); filter: blur(40px); animation: float 8s ease-in-out infinite 2s;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-lead">Pixel-perfect design, delivered fast. Choose a package or request a custom quote.</p>
+      <div class="grid">
+        <div class="card reveal">
+          <span class="pill">Brand Identity</span>
+          <h3>Logo & Brand System</h3>
+          <p>Create a timeless identity with logo, color, type & usage guide. Export kit for print & digital included.</p>
+        </div>
+        <div class="card reveal">
+          <span class="pill">Social Media</span>
+          <h3>Content & Ad Creatives</h3>
+          <p>High-converting posts, stories, reel covers & paid ad banners for Instagram, Facebook & YouTube.</p>
+        </div>
+        <div class="card reveal">
+          <span class="pill">Editorial</span>
+          <h3>Brochures & Pitch Decks</h3>
+          <p>Premium layouts for catalogs, brand profiles & investor decks. Print-ready PDFs with master files.</p>
+        </div>
+        <div class="card reveal">
+          <span class="pill">UI / Web</span>
+          <h3>Landing & App Mockups</h3>
+          <p>Modern web & mobile UI in Figma with components and responsive grids for dev handoff.</p>
+        </div>
+        <div class="card reveal">
+          <span class="pill">Packaging</span>
+          <h3>Label & Box Design</h3>
+          <p>Eye-catching packaging that stands out on shelves & keeps brand consistency across SKUs.</p>
+        </div>
+        <div class="card reveal">
+          <span class="pill">Retainer</span>
+          <h3>Monthly Design Support</h3>
+          <p>On-demand creative support with priority delivery & consistent brand growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="work">
+    <div class="container">
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-lead">A curated set of logos, branding visuals and campaign creatives. Filter by category.</p>
+
+      <div class="filters" role="tablist" aria-label="Portfolio filters">
+        <button class="filter active" data-filter="all" role="tab">All</button>
+        <button class="filter" data-filter="logo" role="tab">Logos</button>
+        <button class="filter" data-filter="branding" role="tab">Branding</button>
+        <button class="filter" data-filter="ads" role="tab">Ads</button>
+        <button class="filter" data-filter="ui" role="tab">UI</button>
+      </div>
+
+      <div class="grid" id="gallery">
+        <a class="work reveal" data-cat="logo" href="#" aria-label="Logo — Monoline Falcon">
+          <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=1400&auto=format&fit=crop" alt="Minimal monoline falcon mark" loading="lazy"/>
+          <div class="meta"><b>Monoline Falcon</b><span>Logo</span></div>
+        </a>
+        <a class="work reveal" data-cat="branding" href="#" aria-label="Branding — Coffee Roasters">
+          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1400&auto=format&fit=crop" alt="Coffee brand packaging mockups" loading="lazy"/>
+          <div class="meta"><b>Roasters Co.</b><span>Branding</span></div>
+        </a>
+        <a class="work reveal" data-cat="ads" href="#" aria-label="Ad Creative — Summer Campaign">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1400&auto=format&fit=crop" alt="Vibrant summer ad creative" loading="lazy"/>
+          <div class="meta"><b>Summer Burst</b><span>Ads</span></div>
+        </a>
+        <a class="work reveal" data-cat="ui" href="#" aria-label="UI — Finance App">
+          <img src="https://images.unsplash.com/photo-1551281044-8d8e319be6ab?q=80&w=1400&auto=format&fit=crop" alt="Finance mobile app UI mockups" loading="lazy"/>
+          <div class="meta"><b>FinX App</b><span>UI</span></div>
+        </a>
+        <a class="work reveal" data-cat="branding" href="#" aria-label="Branding — Organic Cosmetics">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1400&auto=format&fit=crop" alt="Organic cosmetics branding set" loading="lazy"/>
+          <div class="meta"><b>Leafy</b><span>Branding</span></div>
+        </a>
+        <a class="work reveal" data-cat="ads" href="#" aria-label="Ad Creative — Fitness Promo">
+          <img src="https://images.unsplash.com/photo-1520975922440-0e4a9b1119ae?q=80&w=1400&auto=format&fit=crop" alt="Bold fitness ad poster" loading="lazy"/>
+          <div class="meta"><b>Power Move</b><span>Ads</span></div>
+        </a>
+        <a class="work reveal" data-cat="logo" href="#" aria-label="Logo — Abstract Wave">
+          <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1400&auto=format&fit=crop" alt="Abstract wave symbol on dark" loading="lazy"/>
+          <div class="meta"><b>WaveMark</b><span>Logo</span></div>
+        </a>
+        <a class="work reveal" data-cat="ui" href="#" aria-label="UI — SaaS Dashboard">
+          <img src="https://images.unsplash.com/photo-1551281044-8d8e319be6ab?q=80&w=1400&auto=format&fit=crop" alt="SaaS dashboard desktop UI" loading="lazy"/>
+          <div class="meta"><b>AnalyticsHQ</b><span>UI</span></div>
+        </a>
+        <a class="work reveal" data-cat="branding" href="#" aria-label="Branding — Streetwear">
+          <img src="https://images.unsplash.com/photo-1520975736420-0d7b1ae2e2cf?q=80&w=1400&auto=format&fit=crop" alt="Streetwear lookbook layout" loading="lazy"/>
+          <div class="meta"><b>ONIX</b><span>Branding</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + PROCESS -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p class="section-lead">I blend strategy, typography and color psychology to craft brands that scale. Tools I love: Illustrator, Photoshop, After Effects & Figma.</p>
+
+      <div class="split">
+        <div class="card reveal">
+          <h3>Process</h3>
+          <p>Discover → Moodboard → Concepts → Refinement → Final delivery. Clear communication & fast iterations at every step.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Deliverables</h3>
+          <p>Source files (AI/PSD/FIG), exported assets (SVG/PNG/JPG/PDF), social kits, and a concise brand usage guide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Client Love</h2>
+      <div class="grid">
+        <div class="quote reveal" style="grid-column:span 6">
+          <p>“Shivam gave our startup a brand that looks Fortune-500. The logo, colors and social templates increased conversions within 2 weeks.”</p>
+          <b>— Neha Sharma, Founder, Leafy</b>
+        </div>
+        <div class="quote reveal" style="grid-column:span 6">
+          <p>“Super fast and premium quality. Our ad CTR improved by 38% after switching to his creative set.”</p>
+          <b>— Arjun Rao, Growth, FinX</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Let's Build Your Brand</h2>
+      <p class="section-lead">Send a message with your requirements or ping me directly on WhatsApp.</p>
+
+      <div class="contact">
+        <form class="form" onsubmit="sendInquiry(event)">
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" required placeholder="John / Aisha" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@email.com" />
+          </div>
+          <div class="field">
+            <label for="message">Project Brief</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your brand and what you need…"></textarea>
+          </div>
+          <button class="btn primary" type="submit">Send Inquiry (WhatsApp)</button>
+          <p class="section-lead" style="margin-top:8px">Or contact directly:
+            <a href="https://wa.me/917017371981" target="_blank" rel="noreferrer">WhatsApp</a> •
+            <a href="tel:+917017371981">Call: 7017371981</a>
+          </p>
+        </form>
+
+        <div class="form" style="display:flex; flex-direction:column; gap:14px">
+          <div class="card" style="margin:0">
+            <h3>Why choose me?</h3>
+            <p>Premium HD visuals, lightning-fast delivery, and business-first thinking. I design assets that not only look stunning but perform.</p>
+          </div>
+          <div class="card" style="margin:0">
+            <h3>Working Hours</h3>
+            <p>Mon–Sat · 10:00 AM – 7:00 PM IST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footgrid">
+      <div class="brand">
+        <div class="logo">SG</div>
+        <div>
+          <b>Shivam Goswami</b><br>
+          <small>© <span id="year"></span> All rights reserved.</small>
+        </div>
+      </div>
+      <div class="socials">
+        <a class="soc" href="https://wa.me/917017371981" aria-label="WhatsApp">💬</a>
+        <a class="soc" href="tel:+917017371981" aria-label="Call">📞</a>
+        <a class="soc" href="#home" aria-label="Back to top">⬆️</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const reveal = () => {
+      const els = document.querySelectorAll('.reveal');
+      const vh = window.innerHeight;
+      els.forEach(el=>{
+        const r = el.getBoundingClientRect();
+        if (r.top < vh - 80) el.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', reveal, {passive:true});
+    window.addEventListener('load', reveal);
+
+    // Portfolio filter
+    const buttons = document.querySelectorAll('.filter');
+    const items = document.querySelectorAll('#gallery .work');
+    buttons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        buttons.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.filter;
+        items.forEach(it=>{
+          const show = (cat === 'all') || (it.dataset.cat === cat);
+          it.style.display = show ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Contact form -> open WhatsApp with pre-filled message
+    function sendInquiry(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const brief = document.getElementById('message').value.trim();
+      const text = encodeURIComponent(`Inquiry from portfolio:\nName: ${name}\nEmail: ${email}\nProject: ${brief}`);
+      window.open(`https://wa.me/917017371981?text=${text}`, '_blank');
+    }
+
+    // 3D Tilt Effect
+    const portrait = document.querySelector('.portrait');
+    const card = document.querySelector('.portrait-card');
+    
+    portrait.addEventListener('mousemove', (e) => {
+      const x = e.clientX - portrait.getBoundingClientRect().left;
+      const y = e.clientY - portrait.getBoundingClientRect().top;
+      const centerX = portrait.offsetWidth / 2;
+      const centerY = portrait.offsetHeight / 2;
+      
+      const angleX = (y - centerY) / 15;
+      const angleY = (centerX - x) / 15;
+      
+      card.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.03)`;
+      card.style.boxShadow = `${angleY * 5}px ${angleX * 5}px 30px rgba(0,0,0,0.3)`;
+    });
+    
+    portrait.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+      card.style.boxShadow = '0 25px 50px rgba(0,0,0,0.3)';
+    });
+  </script>
+</body>
+</html>
