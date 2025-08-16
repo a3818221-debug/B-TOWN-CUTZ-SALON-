@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shivam Goswami — Graphic Designer Portfolio</title>
-  <meta name="description" content="Premium portfolio of Shivam Goswami — Branding, logos, social media creatives, UI mockups. HD visuals with business-first thinking." />
+  <title>Shivam Goswami — Premium Graphic Designer</title>
+  <meta name="description" content="Premium portfolio of graphic designer Shivam Goswami. Branding, logos, social creatives, posters, packaging & UI mockups." />
   <meta name="theme-color" content="#0b0f14" />
 
   <!-- Open Graph -->
@@ -14,7 +14,7 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1600&auto=format&fit=crop" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -27,62 +27,69 @@
       --glass:rgba(255,255,255,.06);
       --border:rgba(255,255,255,.12);
       --shadow:0 30px 60px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.03);
-      --radius:22px; --radius-lg:28px; --radius-sm:14px;
+      --radius:22px;
+      --radius-lg:28px;
+      --radius-sm:14px;
+      --max:1200px;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0;
-      background:
-        radial-gradient(60rem 60rem at 10% -10%, #132035 0%, transparent 55%),
-        radial-gradient(60rem 60rem at 110% 10%, #1c1236 0%, transparent 55%),
-        var(--bg);
+      margin:0; background:
+      radial-gradient(60rem 60rem at 10% -10%, #132035 0%, transparent 55%),
+      radial-gradient(60rem 60rem at 110% 10%, #1c1236 0%, transparent 55%),
+      var(--bg);
       color:var(--text);
-      font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-family:Manrope, system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
       line-height:1.6;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      scroll-behavior:smooth;
     }
-    a{color:inherit; text-decoration:none}
     img{max-width:100%; display:block}
+    a{color:inherit; text-decoration:none}
 
-    /* ======= NAV ======= */
-    .nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(14px);
+    /* NAV */
+    .nav{
+      position:sticky; top:0; z-index:50; backdrop-filter:blur(14px);
       background:linear-gradient(to bottom, rgba(7,11,17,.85), rgba(7,11,17,.55));
       border-bottom:1px solid var(--border);
     }
-    .container{max-width:1200px; margin:0 auto; padding:0 20px}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
     .row{display:flex; align-items:center; justify-content:space-between; gap:16px}
-    .brand{display:flex; align-items:center; gap:12px; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; padding:12px 0}
     .logo{
       width:44px; height:44px; border-radius:14px; display:grid; place-items:center;
       background:conic-gradient(from 140deg, #ffef9f, #ffd25a, #ffb703, #ffc65a, #fff1b2);
-      color:#141414; font-weight:800; letter-spacing:.5px; box-shadow:0 10px 24px rgba(255,183,3,.25)
+      color:#141414; font-weight:900; letter-spacing:.4px; box-shadow:0 10px 24px rgba(255,183,3,.25);
     }
-    .brand h1{font-size:18px; margin:0; letter-spacing:.5px}
-    .navlinks{display:flex; gap:18px; align-items:center}
-    .navlinks a{opacity:.9; font-weight:600; padding:10px 14px; border-radius:12px}
+    .brand h1{font-size:18px; margin:0; letter-spacing:.3px}
+    .navlinks{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+    .navlinks a{opacity:.9; font-weight:700; padding:10px 14px; border-radius:12px}
     .navlinks a:hover{background:var(--glass)}
     .cta{background:linear-gradient(92deg, var(--gold), var(--gold-2)); color:#111; font-weight:800; padding:12px 18px; border-radius:999px; box-shadow:0 12px 30px rgba(255,183,3,.35)}
 
-    /* ======= HERO ======= */
+    /* HERO */
     .hero{position:relative; isolation:isolate}
     .hero-wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:40px; padding:90px 0 70px}
-    @media (max-width:920px){.hero-wrap{grid-template-columns:1fr; padding:70px 0 60px}}
-    .badge{display:inline-flex; align-items:center; gap:10px; padding:8px 12px; border-radius:999px; background:var(--glass); border:1px solid var(--border); color:var(--muted); font-weight:600}
-    .title{font-family:Manrope, Poppins, sans-serif; font-size:60px; line-height:1.05; margin:18px 0}
-    @media (max-width:680px){.title{font-size:42px}}
+    @media (max-width:980px){.hero-wrap{grid-template-columns:1fr; padding:70px 0 50px}}
+    .badge{display:inline-flex; align-items:center; gap:10px; padding:7px 12px; border-radius:999px; background:var(--glass); border:1px solid var(--border); color:var(--muted); font-weight:700}
+    .title{font-size:56px; line-height:1.05; margin:16px 0 10px; letter-spacing:.2px}
+    @media (max-width:680px){.title{font-size:40px}}
     .title .grad{background:linear-gradient(92deg, #fff, #ffd25a 55%, #ffb703); -webkit-background-clip:text; background-clip:text; color:transparent}
-    .lead{color:var(--muted); font-size:18px}
-    .hero-cta{display:flex; gap:14px; align-items:center; margin-top:26px; flex-wrap:wrap}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:14px 18px; border-radius:999px; border:1px solid var(--border); background:var(--panel); box-shadow:var(--shadow); font-weight:700}
+    .lead{color:var(--muted); font-size:18px; max-width:620px}
+    .hero-cta{display:flex; gap:12px; align-items:center; margin-top:22px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:13px 18px; border-radius:999px; border:1px solid var(--border); background:var(--panel); box-shadow:var(--shadow); font-weight:800}
+    .btn svg{width:18px; height:18px}
     .btn.primary{background:linear-gradient(92deg, var(--gold), var(--gold-2)); color:#101; border:0}
     .btn.ghost{background:transparent}
-    .stats{display:flex; gap:18px; margin-top:28px; flex-wrap:wrap}
-    .stat{padding:16px 18px; border-radius:16px; background:var(--glass); border:1px solid var(--border); min-width:140px}
+    .stats{display:flex; gap:16px; margin-top:26px; flex-wrap:wrap}
+    .stat{padding:14px 16px; border-radius:16px; background:var(--glass); border:1px solid var(--border); min-width:140px}
     .stat b{font-size:22px}
+
     .portrait{position:relative}
     .portrait-card{padding:16px; border-radius:var(--radius-lg); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border:1px solid var(--border); box-shadow:var(--shadow)}
-    .portrait img{border-radius:18px}
+    .portrait img{border-radius:18px; aspect-ratio:4/5; object-fit:cover}
     .rings{position:absolute; inset:-50px -30px -40px -30px; pointer-events:none; z-index:-1; filter:blur(14px); opacity:.9; background:
       radial-gradient(700px 260px at 40% 10%, rgba(255, 210, 90, .25), transparent 60%),
       radial-gradient(600px 260px at 80% 70%, rgba(255, 109, 40,.15), transparent 60%),
@@ -90,46 +97,45 @@
       border-radius:28px;
     }
 
-    /* ======= SECTIONS ======= */
+    /* SECTIONS */
     section{padding:80px 0}
-    .section-title{font-size:36px; margin:0 0 24px}
-    .section-lead{color:var(--muted); margin-top:-8px}
+    .section-title{font-size:34px; margin:0 0 10px}
+    .section-lead{color:var(--muted); margin:0 0 18px}
 
-    /* ======= GRID/CARDS ======= */
-    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:20px}
-    .card{grid-column:span 4; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--border); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    /* SERVICES */
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px}
+    .card{grid-column:span 4; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--border); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
     @media (max-width:980px){.card{grid-column:span 6}}
     @media (max-width:640px){.card{grid-column:span 12}}
-    .card h3{margin:10px 0 8px}
-    .pill{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid var(--border); border-radius:999px; color:var(--muted); background:var(--glass); font-size:12px; font-weight:700}
+    .card h3{margin:8px 0}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid var(--border); border-radius:999px; color:var(--muted); background:var(--glass); font-size:12px; font-weight:800}
 
-    /* ======= PORTFOLIO ======= */
-    .filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px}
-    .filter{padding:10px 14px; border-radius:999px; border:1px solid var(--border); background:var(--glass); font-weight:700; color:var(--muted); cursor:pointer}
+    /* PORTFOLIO */
+    .filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px}
+    .filter{padding:10px 14px; border-radius:999px; border:1px solid var(--border); background:var(--glass); font-weight:800; color:var(--muted); cursor:pointer}
     .filter.active{background:linear-gradient(92deg, var(--gold), var(--gold-2)); color:#101; border:0}
     .work{position:relative; overflow:hidden; border-radius:20px; border:1px solid var(--border); background:#0b0f14}
-    .work img{width:100%; height:100%; object-fit:cover; aspect-ratio: 4/3; transform:scale(1.02); transition:all .5s ease}
+    .work img{width:100%; height:100%; object-fit:cover; aspect-ratio: 4/3; transform:scale(1.02); transition:all .55s ease}
     .work:hover img{transform:scale(1.08) rotate(.2deg)}
-    .work .meta{position:absolute; inset:auto 0 0 0; padding:16px; display:flex; align-items:center; justify-content:space-between; background:linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,0));}
+    .work .meta{position:absolute; inset:auto 0 0 0; padding:14px; display:flex; align-items:center; justify-content:space-between; background:linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,0));}
     .work .meta b{font-size:16px}
 
-    /* ======= TESTIMONIALS ======= */
-    .quote{grid-column:span 6; padding:24px; border-radius:22px; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--border); box-shadow:var(--shadow)}
-    @media (max-width:900px){.quote{grid-column:span 12}}
-    .quote p{color:var(--muted)}
+    /* ABOUT / TESTIMONIAL */
+    .split{display:grid; grid-template-columns:1.1fr .9fr; gap:20px}
+    @media (max-width:900px){.split{grid-template-columns:1fr}}
+    .quote{padding:22px; border-radius:22px; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--border); box-shadow:var(--shadow)}
+    .quote p{color:var(--muted); margin:0 0 8px}
 
-    /* ======= CONTACT ======= */
-    .contact{display:grid; grid-template-columns:1.1fr .9fr; gap:26px}
+    /* CONTACT */
+    .contact{display:grid; grid-template-columns:1.1fr .9fr; gap:18px}
     @media (max-width:900px){.contact{grid-template-columns:1fr}}
-    .form{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid var(--border); border-radius:22px; padding:20px; box-shadow:var(--shadow)}
-    .field{display:flex; flex-direction:column; gap:8px; margin-bottom:14px}
-    .field input, .field textarea{
-      background:#0b1017; border:1px solid var(--border); color:var(--text); padding:14px 16px; border-radius:14px; outline:none; transition:border .2s ease
-    }
+    .form{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid var(--border); border-radius:22px; padding:18px; box-shadow:var(--shadow)}
+    .field{display:flex; flex-direction:column; gap:8px; margin-bottom:12px}
+    .field input, .field textarea{background:#0b1017; border:1px solid var(--border); color:var(--text); padding:14px 16px; border-radius:14px; outline:none; transition:border .2s ease}
     .field input:focus, .field textarea:focus{border-color:#ffcf5a}
 
-    /* ======= FOOTER ======= */
-    footer{border-top:1px solid var(--border); padding:30px 0; color:var(--muted)}
+    /* FOOTER */
+    footer{border-top:1px solid var(--border); padding:26px 0; color:var(--muted)}
     .footgrid{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
     .socials{display:flex; gap:12px}
     .soc{width:42px; height:42px; display:grid; place-items:center; border-radius:999px; background:var(--glass); border:1px solid var(--border)}
@@ -140,7 +146,7 @@
   </style>
 </head>
 <body>
-  <!-- ===== NAV ===== -->
+  <!-- NAV -->
   <header class="nav">
     <div class="container">
       <div class="row">
@@ -158,24 +164,37 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section id="home" class="hero">
     <div class="container hero-wrap">
       <div>
         <div class="badge">✨ Premium • Branding Expert</div>
         <h2 class="title"><span class="grad">Creative Graphic Designer</span> for bold brands.</h2>
-        <p class="lead">I design iconic logos, high-impact social media creatives, and elegant brand systems. Smooth, HD visuals with strategy at the core.</p>
+        <p class="lead">I craft iconic logos, high-impact social creatives, posters & packaging with a strategy-first approach. Smooth, HD visuals that elevate brands.</p>
         <div class="hero-cta">
-          <a class="btn primary" href="#work">View Portfolio</a>
-          <a class="btn ghost" href="https://wa.me/917017371981" target="_blank" rel="noreferrer">WhatsApp</a>
-          <a class="btn ghost" href="tel:+917017371981">Call Now</a>
+          <a class="btn primary" href="#work">
+            <!-- eye -->
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 5c5 0 9 5 9 7s-4 7-9 7-9-5-9-7 4-7 9-7zm0 2C8 7 4.8 10.2 4 12c.8 1.8 4 5 8 5s7.2-3.2 8-5c-.8-1.8-4-5-8-5zm0 2.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z"/></svg>
+            View Portfolio
+          </a>
+          <a class="btn" href="https://wa.me/917017371981" target="_blank" rel="noreferrer">
+            <!-- whatsapp -->
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5a11 11 0 0 0-17 12.7L3 22l5.9-1.5A11 11 0 1 0 20.5 3.5ZM12 20a8 8 0 0 1-4-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.7-5.8c-.3-.1-1.8-.9-2-1-.2-.1-.3-.1-.5.1s-.6.7-.8.8-.3.1-.5 0a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.8c-.1-.2 0-.4.1-.5l.4-.5c.2-.2.2-.4.3-.6 0-.2 0-.4 0-.6l-.7-1.6c-.2-.4-.5-.4-.7-.4h-.6c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.2.1-1.4 0-.2-.2-.2-.5-.3Z"/></svg>
+            WhatsApp
+          </a>
+          <a class="btn ghost" href="tel:+917017371981">
+            <!-- phone -->
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1v3.6a1 1 0 0 1-1 1A17.8 17.8 0 0 1 3 6a1 1 0 0 1 1-1h3.6a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1Z"/></svg>
+            Call Now
+          </a>
         </div>
         <div class="stats">
-          <div class="stat"><b>120+ brands</b><br><span class="muted">designed</span></div>
-          <div class="stat"><b>7+ years</b><br><span class="muted">experience</span></div>
-          <div class="stat"><b>4.9★</b><br><span class="muted">client rating</span></div>
+          <div class="stat"><b>150+ brands</b><br><span class="muted">elevated</span></div>
+          <div class="stat"><b>8+ years</b><br><span class="muted">experience</span></div>
+          <div class="stat"><b>5.0★</b><br><span class="muted">client rating</span></div>
         </div>
       </div>
+
       <div class="portrait">
         <div class="portrait-card">
           <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1400&auto=format&fit=crop" alt="Designer at work — premium workstation" width="700" height="820" loading="eager"/>
@@ -185,51 +204,51 @@
     </div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
+  <!-- SERVICES -->
   <section id="services">
     <div class="container">
       <h2 class="section-title">Services</h2>
-      <p class="section-lead">Pixel-perfect design, delivered fast. Choose a package or get a custom quote.</p>
+      <p class="section-lead">Pixel-perfect design, delivered fast. Choose a package or request a custom quote.</p>
       <div class="grid">
         <div class="card reveal">
           <span class="pill">Brand Identity</span>
           <h3>Logo & Brand System</h3>
-          <p>Create a recognizable brand with logo, colors, typography and usage rules. Includes export kit for print & digital.</p>
+          <p>Create a timeless identity with logo, color, type & usage guide. Export kit for print & digital included.</p>
         </div>
         <div class="card reveal">
           <span class="pill">Social Media</span>
           <h3>Content & Ad Creatives</h3>
-          <p>High-converting posts, stories, reels cover, and ad banners designed for Instagram, Facebook, and YouTube.</p>
+          <p>High-converting posts, stories, reel covers & paid ad banners for Instagram, Facebook & YouTube.</p>
         </div>
         <div class="card reveal">
           <span class="pill">Editorial</span>
           <h3>Brochures & Pitch Decks</h3>
-          <p>Clean, premium layouts for product catalogs, corporate profiles and investor decks. Print-ready PDFs included.</p>
+          <p>Premium layouts for catalogs, brand profiles & investor decks. Print-ready PDFs with master files.</p>
         </div>
         <div class="card reveal">
           <span class="pill">UI / Web</span>
           <h3>Landing & App Mockups</h3>
-          <p>Modern web and mobile UI mockups in Figma with component libraries and responsive layouts.</p>
+          <p>Modern web & mobile UI in Figma with components and responsive grids for dev handoff.</p>
         </div>
         <div class="card reveal">
           <span class="pill">Packaging</span>
           <h3>Label & Box Design</h3>
-          <p>Eye-catching packaging that stands out on shelves and keeps brand consistency across SKUs.</p>
+          <p>Eye-catching packaging that stands out on shelves & keeps brand consistency across SKUs.</p>
         </div>
         <div class="card reveal">
           <span class="pill">Retainer</span>
           <h3>Monthly Design Support</h3>
-          <p>On-demand design for brands that need continuous creative output with priority delivery.</p>
+          <p>On-demand creative support with priority delivery & consistent brand growth.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PORTFOLIO ===== -->
+  <!-- PORTFOLIO -->
   <section id="work">
     <div class="container">
       <h2 class="section-title">Selected Work</h2>
-      <p class="section-lead">A curated set of logos, brand visuals and campaign creatives. Use filters to explore.</p>
+      <p class="section-lead">A curated set of logos, branding visuals and campaign creatives. Filter by category.</p>
 
       <div class="filters" role="tablist" aria-label="Portfolio filters">
         <button class="filter active" data-filter="all" role="tab">All</button>
@@ -280,52 +299,50 @@
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
+  <!-- ABOUT + PROCESS -->
   <section id="about">
     <div class="container">
       <h2 class="section-title">About</h2>
-      <p class="section-lead">Tools I love: Adobe Illustrator, Photoshop, After Effects and Figma. I combine strategy, typography and color psychology to craft brands that scale.</p>
-      <div class="grid">
+      <p class="section-lead">I blend strategy, typography and color psychology to craft brands that scale. Tools I love: Illustrator, Photoshop, After Effects & Figma.</p>
+
+      <div class="split">
         <div class="card reveal">
           <h3>Process</h3>
-          <p>Discover → Moodboard → Concepts → Refinement → Final delivery in all required formats. Clear communication at every step.</p>
+          <p>Discover → Moodboard → Concepts → Refinement → Final delivery. Clear communication & fast iterations at every step.</p>
         </div>
         <div class="card reveal">
           <h3>Deliverables</h3>
-          <p>Source files (AI/PSD/FIG), exported assets (SVG/PNG/JPG/PDF), social kits, and a quick brand usage guide.</p>
-        </div>
-        <div class="card reveal">
-          <h3>Turnaround</h3>
-          <p>Most logo & brand projects complete within 7–14 days depending on scope. Express delivery available.</p>
+          <p>Source files (AI/PSD/FIG), exported assets (SVG/PNG/JPG/PDF), social kits, and a concise brand usage guide.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== TESTIMONIALS ===== -->
+  <!-- TESTIMONIALS -->
   <section>
     <div class="container">
       <h2 class="section-title">Client Love</h2>
       <div class="grid">
-        <div class="quote reveal">
-          <p>“Shivam gave our startup a brand that looks Fortune-500. The logo, colors and social templates increased our conversions within 2 weeks.”</p>
+        <div class="quote reveal" style="grid-column:span 6">
+          <p>“Shivam gave our startup a brand that looks Fortune-500. The logo, colors and social templates increased conversions within 2 weeks.”</p>
           <b>— Neha Sharma, Founder, Leafy</b>
         </div>
-        <div class="quote reveal">
-          <p>“Super fast and premium quality. Our ad CTR improved by 38% after switching to Shivam’s creative set.”</p>
+        <div class="quote reveal" style="grid-column:span 6">
+          <p>“Super fast and premium quality. Our ad CTR improved by 38% after switching to his creative set.”</p>
           <b>— Arjun Rao, Growth, FinX</b>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
+  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Let’s Build Your Brand</h2>
       <p class="section-lead">Send a message with your requirements or ping me directly on WhatsApp.</p>
+
       <div class="contact">
-        <form class="form" onsubmit="sendMail(event)">
+        <form class="form" onsubmit="sendInquiry(event)">
           <div class="field">
             <label for="name">Your Name</label>
             <input id="name" name="name" required placeholder="John / Aisha" />
@@ -338,11 +355,10 @@
             <label for="message">Project Brief</label>
             <textarea id="message" name="message" rows="5" required placeholder="Tell me about your brand and what you need…"></textarea>
           </div>
-          <button class="btn primary" type="submit">Send Inquiry</button>
-          <p class="section-lead" style="margin-top:10px">
-            Or contact directly:
-            <a href="mailto:designer@email.com">designer@email.com</a> •
-            <a href="https://wa.me/917017371981" target="_blank" rel="noreferrer">WhatsApp</a>
+          <button class="btn primary" type="submit">Send Inquiry (WhatsApp)</button>
+          <p class="section-lead" style="margin-top:8px">Or contact directly:
+            <a href="https://wa.me/917017371981" target="_blank" rel="noreferrer">WhatsApp</a> •
+            <a href="tel:+917017371981">Call: 7017371981</a>
           </p>
         </form>
 
@@ -360,7 +376,7 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>
     <div class="container footgrid">
       <div class="brand">
@@ -371,7 +387,7 @@
         </div>
       </div>
       <div class="socials">
-        <a class="soc" href="https://wa.me/917017371981" aria-label="WhatsApp" target="_blank" rel="noreferrer">💬</a>
+        <a class="soc" href="https://wa.me/917017371981" aria-label="WhatsApp">💬</a>
         <a class="soc" href="tel:+917017371981" aria-label="Call">📞</a>
         <a class="soc" href="#home" aria-label="Top">⬆️</a>
       </div>
@@ -383,12 +399,16 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Reveal on scroll
-    const observer = new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    const reveal = () => {
+      const els = document.querySelectorAll('.reveal');
+      const vh = window.innerHeight;
+      els.forEach(el=>{
+        const r = el.getBoundingClientRect();
+        if (r.top < vh - 80) el.classList.add('visible');
       });
-    }, {threshold: .15});
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    };
+    window.addEventListener('scroll', reveal, {passive:true});
+    window.addEventListener('load', reveal);
 
     // Portfolio filter
     const buttons = document.querySelectorAll('.filter');
@@ -397,23 +417,22 @@
       btn.addEventListener('click', ()=>{
         buttons.forEach(b=>b.classList.remove('active'));
         btn.classList.add('active');
-        const f = btn.dataset.filter;
+        const cat = btn.dataset.filter;
         items.forEach(it=>{
-          const show = f==='all' || it.dataset.cat===f;
-          it.style.display = show ? '' : 'none';
+          const show = (cat === 'all') || (it.dataset.cat === cat);
+          it.style.display = show ? 'block' : 'none';
         });
       });
     });
 
-    // Simple mailto fallback
-    function sendMail(e){
+    // Contact form -> open WhatsApp with pre-filled message
+    function sendInquiry(e){
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
-      const msg = document.getElementById('message').value.trim();
-      const subject = encodeURIComponent("New Project Inquiry — " + name);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nProject Brief:\n${msg}`);
-      window.location.href = `mailto:designer@email.com?subject=${subject}&body=${body}`;
+      const brief = document.getElementById('message').value.trim();
+      const text = encodeURIComponent(`Inquiry from portfolio:\nName: ${name}\nEmail: ${email}\nProject: ${brief}`);
+      window.open(`https://wa.me/917017371981?text=${text}`, '_blank');
     }
   </script>
 </body>
